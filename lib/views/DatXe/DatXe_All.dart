@@ -55,6 +55,7 @@ class _MyDatXeAllpage extends State<MyDatXeAllpage>
     return false;
   }
 
+// load width click
   loadrefresh() {
     setState(() {
       Navigator.push(
