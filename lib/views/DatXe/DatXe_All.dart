@@ -3,13 +3,10 @@ import 'package:app_eoffice/block/base/state.dart';
 import 'package:app_eoffice/widget/DatXe/DatXePanel.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
-import 'package:app_eoffice/block/CongViecBloc.dart';
 import 'package:app_eoffice/main.dart';
-import 'package:app_eoffice/widget/CongViec/CongViecpanel.dart';
 import 'package:app_eoffice/widget/NoInternetConnection.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:provider/provider.dart';
-import 'package:app_eoffice/utils/Base.dart';
 
 class MyDatXeAllpage extends StatefulWidget {
   final String requestkeyword;

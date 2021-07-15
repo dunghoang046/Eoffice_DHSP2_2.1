@@ -326,7 +326,11 @@ class _Mylogin extends State<Mylogin> {
   }
 
   _login() async {
-    if (_formKey.currentState.validate()) {
+    var checkinter = await checkinternet();
+    if (!checkinter) {
+      Toast.show('Kiểm tra kết nối mạng', context,
+          duration: 3, gravity: Toast.TOP, backgroundColor: Colors.red);
+    } else if (_formKey.currentState.validate()) {
       String _username = _usernameController.text;
       String _password = _passwordController.text;
 
