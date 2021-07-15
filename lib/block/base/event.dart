@@ -3,7 +3,9 @@ abstract class ActionEvent {
   dynamic donviid;
 }
 
-class NoEven extends ActionEvent {}
+class NoEvent extends ActionEvent {}
+
+class ViewEvent extends ActionEvent {}
 
 class AddEvent extends ActionEvent {}
 

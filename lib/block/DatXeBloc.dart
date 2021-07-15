@@ -26,7 +26,7 @@ class DatXeblock extends Blocdispose {
   var dataquery = {
     "CurrentPage": '1',
     "RowPerPage": '10',
-    "SearchIn": 'SoKyHieu,TrichYeu',
+    "SearchIn": 'MoTa',
     "Keyword": '',
   };
   DatXeblock(keyword, type) {

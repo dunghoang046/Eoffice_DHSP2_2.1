@@ -158,7 +158,7 @@ class BlocDuThaoVanBanAction extends Bloc<ActionEvent, ActionState> {
         else
           yield ViewState();
       }
-      if (event is NoEven) yield NoState();
+      if (event is NoEvent) yield NoState();
       if (event is ViewYKienEvent) yield ViewYKienState();
     } catch (ex) {
       basemessage = "Có lỗi xảy ra vui lòng xem lại";

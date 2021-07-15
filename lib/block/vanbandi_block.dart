@@ -101,9 +101,8 @@ class BlocVanBanDiAction extends Bloc<ActionEvent, ActionState> {
           yield ErrorState();
         else
           yield ViewState();
-        ;
       }
-      if (event is NoEven) yield NoState();
+      if (event is NoEvent) yield NoState();
     } catch (ex) {}
   }
 }

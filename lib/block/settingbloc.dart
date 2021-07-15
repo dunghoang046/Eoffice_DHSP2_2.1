@@ -25,7 +25,7 @@ class BlocSettingAction extends Bloc<ActionEvent, ActionState> {
           yield DoneState();
         ;
       }
-      if (event is NoEven) yield NoState();
+      if (event is NoEvent) yield NoState();
     } catch (ex) {}
   }
 }

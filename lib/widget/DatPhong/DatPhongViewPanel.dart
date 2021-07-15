@@ -1,12 +1,12 @@
-import 'package:app_eoffice/models/ThongTinDatXeItem.dart';
+import 'package:app_eoffice/models/ThongTinDatPhongItem.dart';
 import 'package:app_eoffice/utils/Base.dart';
 import 'package:flutter/material.dart';
 import 'package:date_format/date_format.dart';
 import 'package:flutter_html/flutter_html.dart';
 
-class DatXeViewPanel extends StatelessWidget {
-  ThongTinDatXeItem obj;
-  DatXeViewPanel({@required this.obj});
+class DatPhongViewPanel extends StatelessWidget {
+  ThongTinDatPhongItem obj;
+  DatPhongViewPanel({@required this.obj});
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +28,9 @@ class DatXeViewPanel extends StatelessWidget {
       padding: EdgeInsets.all(7),
       child: Column(
         children: <Widget>[
-          containerRow('Người đặt: ', obj.tennguoitao),
-          containerRow('Phòng ban: ', obj.tenphongban),
+          containerRow('Nội dung: ', obj.noidung),
+          containerRow('Điện thoại: ', obj.sodienthoai),
+          containerRow('Email: ', obj.email),
           containerRow(
               'Thời gian: ',
               (obj.thoigianbatdau != null
@@ -41,26 +42,24 @@ class DatXeViewPanel extends StatelessWidget {
                           formatDate(DateTime.parse(obj.thoigianketthuc),
                               [dd, '/', mm, '/', yyyy, ' ', HH, ':', nn])
                       : '')),
-          if (obj.songuoi != null)
-            containerRow('Số ngưởi: ', obj.songuoi.toString()),
-          if (obj.mota != null) containerRow('Nội dung: ', obj.mota),
-          if (obj.diemden != null && obj.diemden.length > 0)
-            containerRow('Điểm đến: ', obj.diemden),
-          if (obj.diemdon != null && obj.diemdon.length > 0)
-            containerRow('Điểm đón: ', obj.diemdon),
-          if (obj.tennguoilaixe != null && obj.tennguoilaixe.length > 0)
-            containerRow('Lái xe: ', obj.tennguoilaixe),
-          if (obj.trangthaiid == 3) containerRow('Xe: ', obj.tendanhmucxe),
-          if (obj.bienso != null && obj.bienso.length > 0)
-            containerRow('Biển số: ', obj.bienso),
+          if (obj.lanhdaochutri != null)
+            containerRow('Lãnh đạo chủ trì: ', obj.lanhdaochutri.toString()),
+          if (obj.donvidangky != null)
+            containerRow('Đơn vị đăng ký: ', obj.donvidangky),
+          if (obj.nguoidangky != null && obj.nguoidangky.length > 0)
+            containerRow('Người đăng ký: ', obj.nguoidangky),
+          if (obj.thanhphanthamgia != null && obj.thanhphanthamgia.length > 0)
+            containerRow('Thành phần: ', obj.thanhphanthamgia),
+
           if (obj.trangthaiid == 0 || obj.trangthaiid == 4)
             containerRow('Trạng thái: ', 'Tạo mới'),
           if (obj.trangthaiid == 1) containerRow('Trạng thái: ', 'Chờ duyệt'),
           if (obj.trangthaiid == 3) containerRow('Trạng thái: ', 'Đã duyệt'),
           if (obj.trangthaiid == 2) containerRow('Trạng thái: ', 'Từ chối'),
-          if (obj.trangthaiid == 3)
-            containerRow('Người phê duyệt: ', obj.tennguoiquantri),
-
+          if (obj.songuoi != null && obj.songuoi.length > 0)
+            containerRow('Số người tham gia: ', obj.songuoi),
+          if (obj.yeucau != null && obj.yeucau.length > 0)
+            containerRow('Yêu cầu: ', obj.yeucau),
           if (obj.trangthaiid == 2) containerRow('Lý do: ', obj.lydo),
           // containerRow('Trạng thái: ', obj.strTrangthai),
           if (obj.lstfile != null && obj.lstfile.length > 0)

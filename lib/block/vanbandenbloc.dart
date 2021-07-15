@@ -141,7 +141,7 @@ class BlocVanBanDenAction extends Bloc<ActionEvent, ActionState> {
       if (event is ViewYKienEvent) {
         yield ViewYKienState();
       }
-      if (event is NoEven) yield NoState();
+      if (event is NoEvent) yield NoState();
     } catch (ex) {}
   }
 }

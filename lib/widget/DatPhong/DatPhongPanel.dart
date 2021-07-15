@@ -1,27 +1,27 @@
-import 'package:app_eoffice/models/ThongTinDatXeItem.dart';
-import 'package:app_eoffice/views/DatXe/DatXe_ChiTiet.dart';
+import 'package:app_eoffice/block/datphongblock.dart';
+import 'package:app_eoffice/models/ThongTinDatPhongItem.dart';
+import 'package:app_eoffice/views/DatPhong/Datphong_Chitiet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:app_eoffice/block/DatXeBloc.dart';
 import 'package:app_eoffice/views/CongViec/CongViec_ThemMoi.dart';
 
 import 'package:app_eoffice/widget/Base_widget.dart';
 import 'package:app_eoffice/widget/NoInternetConnection.dart';
 import 'package:date_format/date_format.dart';
 
-class DatXepanel extends StatefulWidget {
-  DatXeblock objBloc;
+class DatPhongpanel extends StatefulWidget {
+  DatPhongblock objBloc;
   ScrollController scrollController_rq;
-  DatXepanel({@required this.objBloc, this.scrollController_rq});
+  DatPhongpanel({@required this.objBloc, this.scrollController_rq});
 
-  _DatXepanel createState() => _DatXepanel();
+  _DatPhongpanel createState() => _DatPhongpanel();
 }
 
 bool inter = true;
 bool check = true;
 int totals = 0;
 
-class _DatXepanel extends State<DatXepanel> {
+class _DatPhongpanel extends State<DatPhongpanel> {
   @override
   @override
   void initState() {
@@ -42,7 +42,7 @@ class _DatXepanel extends State<DatXepanel> {
       builder:
           // ignore: missing_return
           (BuildContext context,
-              AsyncSnapshot<List<ThongTinDatXeItem>> snapshot) {
+              AsyncSnapshot<List<ThongTinDatPhongItem>> snapshot) {
         switch (snapshot.connectionState) {
           case ConnectionState.waiting:
           case ConnectionState.none:
@@ -66,7 +66,7 @@ class _DatXepanel extends State<DatXepanel> {
     );
   }
 
-  Widget _buildView({List<ThongTinDatXeItem> topStories}) {
+  Widget _buildView({List<ThongTinDatPhongItem> topStories}) {
     return ListView.builder(
       physics: const AlwaysScrollableScrollPhysics(),
       controller: widget.scrollController_rq,
@@ -116,26 +116,26 @@ class _DatXepanel extends State<DatXepanel> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => MyDatXeChiTiet(
+                          builder: (context) => MyDatPhongChiTiet(
                                 id: topStories[index].id,
                               )));
                 },
                 title: Text(
-                    topStories[index].mota != null
-                        ? topStories[index].mota
+                    topStories[index].noidung != null
+                        ? topStories[index].noidung
                         : '',
                     style: TextStyle(
                         color: Colors.black54, fontWeight: FontWeight.bold)),
                 subtitle: Column(
                   children: <Widget>[
-                    if (topStories[index].tennguoitao.length > 0)
+                    if (topStories[index].nguoidangky.length > 0)
                       containerRow(
-                        'Người tạo: ',
-                        topStories[index].tennguoitao,
+                        'Người đăng ký: ',
+                        topStories[index].nguoidangky,
                       ),
-                    if (topStories[index].tenphongban.length > 0)
+                    if (topStories[index].donvidangky.length > 0)
                       containerRow(
-                          'Phòng ban: ', topStories[index].tenphongban),
+                          'Đơn vị đăng ký: ', topStories[index].donvidangky),
                     containerRow(
                         '',
                         (topStories[index].thoigianbatdau != null

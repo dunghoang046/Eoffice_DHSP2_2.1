@@ -6,6 +6,7 @@ import 'package:app_eoffice/block/DuThaoVanBanblock.dart';
 import 'package:app_eoffice/block/NguoiDungblock.dart';
 import 'package:app_eoffice/block/chatGroup_block.dart';
 import 'package:app_eoffice/block/chat_block.dart';
+import 'package:app_eoffice/block/datphongblock.dart';
 import 'package:app_eoffice/block/login_bloc/auth_bloc.dart';
 import 'package:app_eoffice/block/settingbloc.dart';
 import 'package:app_eoffice/block/vanbandenbloc.dart';
@@ -17,6 +18,7 @@ import 'package:app_eoffice/utils/quyenhan.dart';
 import 'package:app_eoffice/views/Chat/chat.dart';
 import 'package:app_eoffice/views/Chat/chat_screen.dart';
 import 'package:app_eoffice/views/CongViec/CongViec.dart';
+import 'package:app_eoffice/views/DatPhong/DatPhong.dart';
 import 'package:app_eoffice/views/DatXe/DatXe.dart';
 import 'package:app_eoffice/views/DuThaoVanBan/DuThaoVanBan.dart';
 import 'package:app_eoffice/views/LichlamViec/LichlamViec.dart';
@@ -127,6 +129,9 @@ class MyApp extends StatelessWidget {
         BlocProvider<BlocChatGroupAction>(
           create: (context) => BlocChatGroupAction(),
         ),
+        BlocProvider<BlocDatPhongAction>(
+          create: (context) => BlocDatPhongAction(),
+        ),
       ],
       child: MaterialApp(
           color: Colors.white,
@@ -171,12 +176,10 @@ class _MyMain extends State<Mymain> {
       // Handle data message
       final dynamic data = message['data'];
     }
-
     if (message.containsKey('notification')) {
       // Handle notification message
       final dynamic notification = message['notification'];
     }
-
     // Or do other work.
   }
 
@@ -357,6 +360,22 @@ class _MyMain extends State<Mymain> {
                           _scaffoldKey.currentState.openDrawer();
                         }
                         SimpleRouter.forward(DatXepage());
+                      });
+                    },
+                  ),
+                if (checkquyen(nguoidungsessionView.quyenhan,
+                    new QuyenHan().Thongtindatphong))
+                  ListTile(
+                    leading: Icon(Icons.roofing),
+                    title: Text('Thông tin đặt phòng'),
+                    onTap: () {
+                      setState(() {
+                        if (_scaffoldKey.currentState.isDrawerOpen) {
+                          _scaffoldKey.currentState.openEndDrawer();
+                        } else {
+                          _scaffoldKey.currentState.openDrawer();
+                        }
+                        SimpleRouter.forward(DatPhongpage());
                       });
                     },
                   ),
