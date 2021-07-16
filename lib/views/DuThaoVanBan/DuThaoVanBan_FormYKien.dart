@@ -35,7 +35,7 @@ class _MyDuThaoVanBanYKienForm extends State<MyDuThaoVanBanYKienForm> {
   void initState() {
     _noidung.text = '';
     _hanxuly.text = '';
-    BlocProvider.of<BlocDuThaoVanBanAction>(context).add(NoEven());
+    BlocProvider.of<BlocDuThaoVanBanAction>(context).add(NoEvent());
   }
 
   Widget build(BuildContext context) {

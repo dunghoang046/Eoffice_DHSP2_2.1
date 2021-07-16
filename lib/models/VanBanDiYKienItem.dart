@@ -55,6 +55,6 @@ class VanBanDiYKienItem {
       List<dynamic> vbData = map['LtsFileAttach'];
       lstfile = vbData.map((f) => FileAttachItem.fromMap(f)).toList();
     } else
-      lstfile = new List<FileAttachItem>();
+      lstfile = <FileAttachItem>[];
   }
 }

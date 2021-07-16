@@ -66,6 +66,7 @@ class Alert extends AlertDialog {
       title: Text(titleText),
       content: Text(contentText),
       actions: <Widget>[
+        // ignore: deprecated_member_use
         RaisedButton(
           onPressed: () => Navigator.pop(context),
           child: Text('Ok'),

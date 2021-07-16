@@ -72,7 +72,7 @@ void configLoading() {
     ..customAnimation = CustomAnimation();
 }
 
-FirebaseMessaging _firebaseMessaging = new FirebaseMessaging();
+// FirebaseMessaging _firebaseMessaging = new FirebaseMessaging();
 
 class CustomAnimation extends EasyLoadingAnimation {
   CustomAnimation();
@@ -157,7 +157,6 @@ var _pageOptions = <StatefulWidget>[];
 bool isFlag = false;
 bool isHome = false;
 String titlehead = 'Trang chủ';
-String _debugLabelString = "";
 
 class _MyMain extends State<Mymain> {
   @override

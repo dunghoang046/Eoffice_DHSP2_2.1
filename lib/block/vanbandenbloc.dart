@@ -39,7 +39,7 @@ class VanBanDenBloc extends Blocdispose {
 
   void loadtop(keyword, loai, loaiListID, checkvt) async {
     _topStoriesStreamController = new StreamController();
-    _lstobject = new List<VanBanDenItem>();
+    _lstobject = <VanBanDenItem>[];
     currentPage = 1;
     loadMore(keyword, loai, loaiListID, checkvt);
   }

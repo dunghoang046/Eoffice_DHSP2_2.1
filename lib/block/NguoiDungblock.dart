@@ -12,6 +12,7 @@ class BlocNguoiDungAction extends Bloc<ActionEvent, ActionState> {
   bool isError = false;
   NguoiDung_Api objapi = new NguoiDung_Api();
 
+  // ignore: non_constant_identifier_names
   Base_service base_service = new Base_service();
   static get loginItem => loginItem;
 

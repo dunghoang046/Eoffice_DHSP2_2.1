@@ -9,8 +9,6 @@ class LichlamViecBloc extends Blocdispose {
   int total = 0;
   var _lstobject = <NoiDungLichItem>[];
   final _repository = LichlamViec_Api();
-
-  var _isLoadingMore = false;
   var _currentStoryIndex = 0;
 
   StreamController<List<NoiDungLichItem>> _topStoriesStreamController =

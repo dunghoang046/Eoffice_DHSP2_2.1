@@ -14,6 +14,7 @@ class VanBanDenChuaChuyenBloc extends Blocdispose {
   var _isLoadingMore = false;
   var _currentStoryIndex = 0;
 
+  // ignore: non_constant_identifier_names
   StreamController<List<VanBanDenItem>> _topStories_cxlStreamController =
       StreamController();
   Stream<List<VanBanDenItem>> get topStorieschuaxl =>
@@ -35,7 +36,7 @@ class VanBanDenChuaChuyenBloc extends Blocdispose {
 
   void loadtop(keyword, loai, loaiListID, checkvt) async {
     _topStories_cxlStreamController = new StreamController();
-    _lstobject = new List<VanBanDenItem>();
+    _lstobject = <VanBanDenItem>[];
     currentPage = 1;
     loadMore(keyword, loai, loaiListID, checkvt);
   }

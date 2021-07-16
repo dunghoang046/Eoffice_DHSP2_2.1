@@ -25,7 +25,7 @@ class _MyVanBanDiGuiNhan extends State<MyVanBanDiGuiNhan> {
   Vanbandi_api objapi = new Vanbandi_api();
   @override
   void initState() {
-    BlocProvider.of<BlocVanBanDiAction>(context).add(NoEven());
+    BlocProvider.of<BlocVanBanDiAction>(context).add(NoEvent());
     load();
     super.initState();
   }

@@ -10,7 +10,6 @@ class BlocSettingAction extends Bloc<ActionEvent, ActionState> {
   @override
   Stream<ActionState> mapEventToState(ActionEvent event) async* {
     Base_service objapi = new Base_service();
-    // TODO: implement mapEventToState
     try {
       bool isError = false;
       if (event is SettingNhanNotificationEvent) {
