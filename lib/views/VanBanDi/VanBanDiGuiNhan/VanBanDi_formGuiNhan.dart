@@ -24,7 +24,7 @@ class MyVanBanDiGuiNhanForm extends StatefulWidget {
 class _MyVanBanDiGuiNhan extends State<MyVanBanDiGuiNhanForm> {
   @override
   void initState() {
-    BlocProvider.of<BlocVanBanDiAction>(context).add(NoEven());
+    BlocProvider.of<BlocVanBanDiAction>(context).add(NoEvent());
     super.initState();
   }
 

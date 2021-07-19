@@ -47,7 +47,7 @@ var dataquery = {
 
 class _MyVanBanDenYKienForm extends State<MyVanBanDenYKienForm> {
   void initState() {
-    BlocProvider.of<BlocVanBanDenAction>(context).add(NoEven());
+    BlocProvider.of<BlocVanBanDenAction>(context).add(NoEvent());
     super.initState();
     _noidung.text = '';
     _hanxuly.text = '';
