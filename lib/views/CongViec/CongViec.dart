@@ -12,6 +12,7 @@ import 'package:simple_router/simple_router.dart';
 int currentPage = 0;
 int currentPageNow = 1;
 
+// thay doi cong viec
 class CongViecpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
