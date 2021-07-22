@@ -102,7 +102,7 @@ class _MySelect_NguoiDung extends State<MySelect_NguoiDung> {
         lstuser.addAll(objcv.ltsUserPerform
             .map((e) => e.id.toString() + "|" + e.donviid.toString()));
         objnd.lstnguoidung = objnd.lstnguoidung
-            .where((p) => !lstuser.contains(p..strNguoiDungDonVi))
+            .where((p) => !lstuser.contains(p.strNguoiDungDonVi))
             .toList();
       }
       if (objcv != null &&
