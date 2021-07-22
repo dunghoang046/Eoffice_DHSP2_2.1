@@ -2,6 +2,7 @@ import 'package:app_eoffice/models/DonViItem.dart';
 import 'package:app_eoffice/models/NhomNguoiDungItem.dart';
 import 'Base_service.dart';
 
+// ignore: camel_case_types
 class DonVi_Api {
   Base_service base_service = new Base_service();
 

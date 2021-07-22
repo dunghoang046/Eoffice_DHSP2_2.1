@@ -16,6 +16,6 @@ class DanhMucTenItem {
       List<dynamic> vbData = map['LtsDanhMucGiaTri'];
       lstdanhmucgt = vbData.map((f) => DanhMucGiaTriItem.fromMap(f)).toList();
     } else
-      lstdanhmucgt = new List<DanhMucGiaTriItem>();
+      lstdanhmucgt = <DanhMucGiaTriItem>[];
   }
 }

@@ -98,6 +98,6 @@ class VanBanDiItem {
       lstdanhmucgiatri =
           vbData.map((f) => DanhMucGiaTriItem.fromMap(f)).toList();
     } else
-      lstdanhmucgiatri = new List<DanhMucGiaTriItem>();
+      lstdanhmucgiatri = <DanhMucGiaTriItem>[];
   }
 }

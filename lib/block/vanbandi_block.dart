@@ -12,7 +12,7 @@ class VanBanDiBloc extends Blocdispose {
   int currentPageNow = 1;
   int currentPage = 1;
   int total = 0;
-  var _lstobject = List<VanBanDiItem>();
+  var _lstobject = <VanBanDiItem>[];
   final _repository = Vanbandi_api();
 
   var _isLoadingMore = false;
@@ -20,7 +20,6 @@ class VanBanDiBloc extends Blocdispose {
 
   StreamController<List<VanBanDiItem>> _topStoriesStreamController =
       StreamController();
-  final _actionController = StreamController<bool>();
   Stream<List<VanBanDiItem>> get topStories =>
       _topStoriesStreamController.stream;
   var dataquery = {

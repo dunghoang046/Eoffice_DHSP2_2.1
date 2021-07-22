@@ -130,7 +130,7 @@ class WorkTaskItem {
       List<dynamic> vbData = map['LtsUserFollow'];
       ltsUserFollow = vbData.map((f) => UserItem.fromMap(f)).toList();
     } else
-      ltsUserFollow = new List<UserItem>();
+      ltsUserFollow = <UserItem>[];
 
     if (map['LtsGroupPerform'] != null && map['LtsGroupPerform'].length > 0) {
       List<dynamic> vbData = map['LtsGroupPerform'];
@@ -142,7 +142,7 @@ class WorkTaskItem {
       List<dynamic> vbData = map['LtsGroupFollow'];
       ltsGroupFollow = vbData.map((f) => UserDonViItem.fromMap(f)).toList();
     } else
-      ltsGroupFollow = new List<UserDonViItem>();
+      ltsGroupFollow = <UserDonViItem>[];
 
     if (map['LtsUserGroupPerform'] != null &&
         map['LtsUserGroupPerform'].length > 0) {
@@ -150,7 +150,7 @@ class WorkTaskItem {
       ltsUserGroupPerform =
           vbData.map((f) => UserNhomNguoiDungItem.fromMap(f)).toList();
     } else
-      ltsUserGroupPerform = new List<UserNhomNguoiDungItem>();
+      ltsUserGroupPerform = <UserNhomNguoiDungItem>[];
 
     if (map['LtsUserGroupFollow'] != null &&
         map['LtsUserGroupFollow'].length > 0) {
@@ -158,12 +158,12 @@ class WorkTaskItem {
       ltsUserGroupFollow =
           vbData.map((f) => UserNhomNguoiDungItem.fromMap(f)).toList();
     } else
-      ltsUserGroupFollow = new List<UserNhomNguoiDungItem>();
+      ltsUserGroupFollow = <UserNhomNguoiDungItem>[];
 
     if (map['LtsDanhMucGiaTri'] != null && map['LtsDanhMucGiaTri'].length > 0) {
       List<dynamic> vbData = map['LtsDanhMucGiaTri'];
       lstdanhmucgt = vbData.map((f) => DanhMucGiaTriItem.fromMap(f)).toList();
     } else
-      lstdanhmucgt = new List<DanhMucGiaTriItem>();
+      lstdanhmucgt = <DanhMucGiaTriItem>[];
   }
 }

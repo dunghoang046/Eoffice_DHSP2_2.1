@@ -1,4 +1,3 @@
-import 'package:app_eoffice/block/base/state.dart';
 import 'package:app_eoffice/block/login_bloc/Auth_event.dart';
 import 'package:app_eoffice/block/login_bloc/auth_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,6 +7,7 @@ import 'package:app_eoffice/utils/Base.dart';
 class BlocAuth extends Bloc<AuthEvent, AuthState> {
   BlocAuth() : super(AuthLogoutSate());
   get initialState => AuthLogoutSate();
+  // ignore: non_constant_identifier_names
   final Base_service base_service = new Base_service();
 
   static get loginItem => loginItem;
@@ -16,7 +16,6 @@ class BlocAuth extends Bloc<AuthEvent, AuthState> {
   Stream<AuthState> mapEventToState(AuthEvent event) async* {
     try {
       bool _isLoged = false;
-      var isErrorsetting = false;
       if (event is LoginEvent) {
         yield AuLoadingState();
         var data = {

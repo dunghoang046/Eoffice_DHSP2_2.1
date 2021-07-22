@@ -56,7 +56,7 @@ class _MyComBo_NhomNguoiDung extends State<MyComBo_NhomNguoiDung> {
                 searchHint: "Chọn nhóm người dùng",
                 onChanged: (value) {
                   setState(() {
-                    lstnhomnguoidung = new List<int>();
+                    lstnhomnguoidung = <int>[];
                     selectedItemndv = value;
                     selectedItemndv.forEach((element) {
                       lstnhomnguoidung.add(int.parse(lst[element].value));

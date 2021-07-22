@@ -38,10 +38,10 @@ bool ispagechat = false;
 bool ispagechatgroup = false;
 final httpOptions = new HttpConnectionOptions(
   logger: transportProtLogger,
-  accessTokenFactory: () {
-    // ignore: unnecessary_statements
-    nguoidungsession.token;
-  },
+  // accessTokenFactory: () {
+  //   // ignore: unnecessary_statements
+  //   nguoidungsession.token;
+  // },
   // accessTokenFactory: () async => await getAccessToken()
 );
 
@@ -86,9 +86,9 @@ Future showNotificationWithoutSound(String title, String noidung) async {
   );
 }
 
-Future onClickNotification(String payload) {
-  SimpleRouter.forward(HoSoCaNhanPage());
-}
+// Future onClickNotification(String payload) {
+//   SimpleRouter.forward(HoSoCaNhanPage());
+// }
 
 Future<void> closeChatConnection() async {
   if (hubConnection.state == HubConnectionState.Connected) {
@@ -350,6 +350,7 @@ Widget buildDefaultDialog() {
 
 Widget loaddataerror() =>
     Center(child: SizedBox(width: 30, height: 30, child: Text('load')));
+// ignore: non_constant_identifier_names
 Widget on_alter(context, noidung) {
   Alert(
     context: context,

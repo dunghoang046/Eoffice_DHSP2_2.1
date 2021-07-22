@@ -80,26 +80,26 @@ class VanBanDenItem {
       List<dynamic> vbData = map['LtsFileAttach'];
       lstfile = vbData.map((f) => FileAttachItem.fromMap(f)).toList();
     } else
-      lstfile = new List<FileAttachItem>();
+      lstfile = <FileAttachItem>[];
 
     if (map['LtsVanBanDenGuiNhan'] != null &&
         map['LtsVanBanDenGuiNhan'].length > 0) {
       List<dynamic> vbData = map['LtsVanBanDenGuiNhan'];
       lstguinhan = vbData.map((f) => VanBanDenGuiNhanItem.fromMap(f)).toList();
     } else
-      lstguinhan = new List<VanBanDenGuiNhanItem>();
+      lstguinhan = <VanBanDenGuiNhanItem>[];
     if (map['LtsVBDTrangThai'] != null && map['LtsVBDTrangThai'].length > 0) {
       List<dynamic> vbData = map['LtsVBDTrangThai'];
       lsttrangthai =
           vbData.map((f) => VanbandentrangthaiItem.fromMap(f)).toList();
     } else
-      lsttrangthai = new List<VanbandentrangthaiItem>();
+      lsttrangthai = <VanbandentrangthaiItem>[];
 
     if (map['LtsDanhMucGiaTri'] != null && map['LtsDanhMucGiaTri'].length > 0) {
       List<dynamic> vbData = map['LtsDanhMucGiaTri'];
       lstdanhmucgiatri =
           vbData.map((f) => DanhMucGiaTriItem.fromMap(f)).toList();
     } else
-      lstdanhmucgiatri = new List<DanhMucGiaTriItem>();
+      lstdanhmucgiatri = <DanhMucGiaTriItem>[];
   }
 }
