@@ -11,6 +11,7 @@ import 'package:simple_router/simple_router.dart';
 
 int currentPage = 0;
 int currentPageNow = 1;
+int checkid = 0;
 
 class CongViecpage extends StatelessWidget {
   @override
